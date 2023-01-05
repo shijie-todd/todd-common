@@ -1,9 +1,71 @@
-const sum = (a: number, b: number): number => {
-  return a + b;
-}
+import tCookie, { setCookie, getCookie, deleteCookie } from './cookie'
+import tTime, {
+  getFormattedTime,
+  getYYYYMMDDHHmmss,
+  getYYYYMMDDHHmm,
+  getMMDDHHmm,
+  getYYYYMMDD,
+  day2second,
+  second2day,
+} from './time'
+import tColor, {
+  hsla,
+  hsva,
+  rgba,
+  getRgbFromCssColorName,
+  composite,
+  changeColor,
+  scaleColor,
+  getAlphaString,
+  toRgbString,
+  toRgbaString,
+  toHsvString,
+  toHsvaString,
+  toHslString,
+  toHslaString,
+  toHexString,
+  toHexaString,
+  hsl2hsv,
+  hsv2hsl,
+  hsv2rgb,
+  rgb2hsv,
+  rgb2hsl,
+  hsl2rgb,
+} from './color'
 
-const multiply = (a: number, b: number): number => {
-  return a * b;
+export { tCookie, setCookie, getCookie, deleteCookie }
+export {
+  tTime,
+  getFormattedTime,
+  getYYYYMMDDHHmmss,
+  getYYYYMMDDHHmm,
+  getMMDDHHmm,
+  getYYYYMMDD,
+  day2second,
+  second2day,
 }
-
-export { sum, multiply }
+export {
+  tColor,
+  hsla,
+  hsva,
+  rgba,
+  getRgbFromCssColorName,
+  composite,
+  changeColor,
+  scaleColor,
+  getAlphaString,
+  toRgbString,
+  toRgbaString,
+  toHsvString,
+  toHsvaString,
+  toHslString,
+  toHslaString,
+  toHexString,
+  toHexaString,
+  hsl2hsv,
+  hsv2hsl,
+  hsv2rgb,
+  rgb2hsv,
+  rgb2hsl,
+  hsl2rgb,
+}
