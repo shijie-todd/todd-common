@@ -432,6 +432,10 @@ const hsl2rgb = (h: number, s: number, l: number): RGB => {
 }
 
 const tColor = {
+  roundChannel,
+  roundDeg,
+  roundAlpha,
+  roundPercent,
   hsla,
   hsva,
   rgba,
@@ -456,6 +460,10 @@ const tColor = {
   hsl2rgb,
 }
 export {
+  roundChannel,
+  roundDeg,
+  roundAlpha,
+  roundPercent,
   hsla,
   hsva,
   rgba,
