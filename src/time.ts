@@ -1,17 +1,14 @@
 const TIME_UNIT = 1000
 
-const getMillisecondsFromStamp = (timeStamp: number): number => {
-  const len = String(timeStamp).length
-  switch (len) {
-  case 10:
-    return timeStamp * TIME_UNIT
-  case 16:
-    return Math.floor(timeStamp / TIME_UNIT)
-  case 13:
-  default:
-    return timeStamp
-  }
-}
+// microsecond  millisecond second
+const micro2milli = (micro: number) => Math.round(micro / TIME_UNIT)
+const micro2second = (micro: number) =>
+  Math.round(micro / TIME_UNIT / TIME_UNIT)
+const milli2micro = (milli: number) => Math.round(milli * TIME_UNIT)
+const milli2second = (milli: number) => Math.round(milli / TIME_UNIT)
+const second2milli = (second: number) => Math.round(second * TIME_UNIT)
+const second2micro = (second: number) =>
+  Math.round(second * TIME_UNIT * TIME_UNIT)
 
 const YYYY = (date: Date): string => date.getFullYear().toString()
 const YY = (date: Date): string => YYYY(date).slice(2)
@@ -30,9 +27,9 @@ const ss = (date: Date): string => s(date).padStart(2, '0')
 
 const getFormattedTime = (
   timeStamp: number | string,
-  format: string,
+  format: string
 ): string => {
-  const milliseconds = getMillisecondsFromStamp(Number(timeStamp))
+  const milliseconds = Number(timeStamp)
   const date = new Date(milliseconds)
 
   return format
@@ -52,9 +49,6 @@ const getFormattedTime = (
     .replace('s', s(date))
 }
 
-const getMMDDHHmm = (timeStamp: number | string): string =>
-  getFormattedTime(timeStamp, 'MM-DD HH:mm')
-
 const getYYYYMMDDHHmmss = (timeStamp: number | string): string =>
   getFormattedTime(timeStamp, 'YYYY-MM-DD HH:mm:ss')
 
@@ -73,22 +67,32 @@ const second2day = (second: number): number => {
 }
 
 const tTime = {
+  micro2milli,
+  micro2second,
+  milli2micro,
+  milli2second,
+  second2milli,
+  second2micro,
   getFormattedTime,
   getYYYYMMDDHHmmss,
   getYYYYMMDDHHmm,
-  getMMDDHHmm,
   getYYYYMMDD,
   day2second,
-  second2day,
+  second2day
 }
 
 export {
+  micro2milli,
+  micro2second,
+  milli2micro,
+  milli2second,
+  second2milli,
+  second2micro,
   getFormattedTime,
   getYYYYMMDDHHmmss,
   getYYYYMMDDHHmm,
-  getMMDDHHmm,
   getYYYYMMDD,
   day2second,
-  second2day,
+  second2day
 }
 export default tTime

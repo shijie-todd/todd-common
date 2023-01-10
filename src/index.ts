@@ -1,9 +1,14 @@
 import tCookie, { setCookie, getCookie, deleteCookie } from './cookie'
 import tTime, {
+  micro2milli,
+  micro2second,
+  milli2micro,
+  milli2second,
+  second2milli,
+  second2micro,
   getFormattedTime,
   getYYYYMMDDHHmmss,
   getYYYYMMDDHHmm,
-  getMMDDHHmm,
   getYYYYMMDD,
   day2second,
   second2day,
@@ -36,10 +41,15 @@ import tColor, {
 export { tCookie, setCookie, getCookie, deleteCookie }
 export {
   tTime,
+  micro2milli,
+  micro2second,
+  milli2micro,
+  milli2second,
+  second2milli,
+  second2micro,
   getFormattedTime,
   getYYYYMMDDHHmmss,
   getYYYYMMDDHHmm,
-  getMMDDHHmm,
   getYYYYMMDD,
   day2second,
   second2day,
