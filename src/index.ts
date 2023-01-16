@@ -14,6 +14,12 @@ import tTime, {
   second2day,
 } from './time'
 import tColor, {
+  normalizeAlpha,
+  normalizeDeg,
+  roundChannel,
+  roundDeg,
+  roundAlpha,
+  roundPercent,
   hsla,
   hsva,
   rgba,
@@ -56,6 +62,12 @@ export {
 }
 export {
   tColor,
+  normalizeAlpha,
+  normalizeDeg,
+  roundChannel,
+  roundDeg,
+  roundAlpha,
+  roundPercent,
   hsla,
   hsva,
   rgba,

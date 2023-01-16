@@ -50,6 +50,10 @@ const normalizeAlpha = (alphaValue: number): number => {
   return alphaValue > 1 ? 1 : alphaValue < 0 ? 0 : alphaValue
 }
 
+const normalizeDeg = (degValue: number): number => {
+  return degValue > 360 ? 360 : degValue < 0 ? 0 : degValue
+}
+
 const stringifyRgb = (r: number, g: number, b: number): string => {
   return `rgb(${roundChannel(r)}, ${roundChannel(g)}, ${roundChannel(b)})`
 }
@@ -432,6 +436,8 @@ const hsl2rgb = (h: number, s: number, l: number): RGB => {
 }
 
 const tColor = {
+  normalizeAlpha,
+  normalizeDeg,
   roundChannel,
   roundDeg,
   roundAlpha,
@@ -460,6 +466,8 @@ const tColor = {
   hsl2rgb,
 }
 export {
+  normalizeAlpha,
+  normalizeDeg,
   roundChannel,
   roundDeg,
   roundAlpha,
