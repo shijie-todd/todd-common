@@ -11,7 +11,7 @@ import tTime, {
   getYYYYMMDDHHmm,
   getYYYYMMDD,
   day2second,
-  second2day,
+  second2day
 } from './time'
 import tColor, {
   normalizeAlpha,
@@ -41,8 +41,9 @@ import tColor, {
   hsv2rgb,
   rgb2hsv,
   rgb2hsl,
-  hsl2rgb,
+  hsl2rgb
 } from './color'
+import tArray, { getRoundPercent, getMaxBalancePercent } from './array'
 
 export { tCookie, setCookie, getCookie, deleteCookie }
 export {
@@ -58,7 +59,7 @@ export {
   getYYYYMMDDHHmm,
   getYYYYMMDD,
   day2second,
-  second2day,
+  second2day
 }
 export {
   tColor,
@@ -89,5 +90,6 @@ export {
   hsv2rgb,
   rgb2hsv,
   rgb2hsl,
-  hsl2rgb,
+  hsl2rgb
 }
+export { tArray, getRoundPercent, getMaxBalancePercent }
