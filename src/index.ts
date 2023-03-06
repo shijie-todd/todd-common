@@ -44,6 +44,7 @@ import tColor, {
   hsl2rgb
 } from './color'
 import tArray, { getRoundPercent, getMaxBalancePercent } from './array'
+import tEncryption, { base64, debase64 } from './encryption'
 
 export { tCookie, setCookie, getCookie, deleteCookie }
 export {
@@ -93,3 +94,4 @@ export {
   hsl2rgb
 }
 export { tArray, getRoundPercent, getMaxBalancePercent }
+export { tEncryption, base64, debase64 }
