@@ -45,6 +45,7 @@ import tColor, {
 } from './color'
 import tArray, { getRoundPercent, getMaxBalancePercent } from './array'
 import tEncryption, { base64, debase64 } from './encryption'
+import $, { downloadViaAnchor } from './dom'
 
 export { tCookie, setCookie, getCookie, deleteCookie }
 export {
@@ -95,3 +96,4 @@ export {
 }
 export { tArray, getRoundPercent, getMaxBalancePercent }
 export { tEncryption, base64, debase64 }
+export { $, downloadViaAnchor }
